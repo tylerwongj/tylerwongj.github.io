@@ -1,0 +1,151 @@
+<!-- Get the logic from the controller to populate the step variable
+<%
+int step = (int)request.getAttribute(CPQConstants.FORM_STEP);
+%>
+-->
+
+<div class="container-fluid cpq-progress-bar">
+	<div class="multi-step-progress-bar-hpi">
+		<c:choose>
+			<c:when test="<%= EstimateType.GENERALIST.equals(estimateType) %>">
+				<div class="multi-step-step <%= step == 0 ? "current" : "" %> <%= step >= 1 ? "complete" : "" %>">
+					<div class="progress-image-hpi">
+						<div class="progress-container-hpi">
+							<div class="progress-hpi progress">
+								<div class="progress-bar-hpi progress-bar"></div>
+							</div>
+						</div>
+
+						<div class="progress-dot-hpi progress-dot-outer-hpi"></div>
+						<div class="progress-dot-hpi progress-dot-inner-hpi"></div>
+					</div>
+
+					<div class="multi-step-text">
+						<liferay-ui:message key="pick-hardware" />
+					</div>
+				</div>
+
+				<div class="multi-step-step <%= step == 1 ? "current" : "" %> <%= step >= 2 ? "complete" : "" %>">
+					<div class="progress-image-hpi">
+						<div class="progress-container-hpi">
+							<div class="progress-hpi progress">
+								<div class="progress-bar-hpi progress-bar"></div>
+							</div>
+						</div>
+
+						<div class="progress-dot-hpi progress-dot-outer-hpi"></div>
+						<div class="progress-dot-hpi progress-dot-inner-hpi"></div>
+					</div>
+
+					<div class="multi-step-text">
+						<liferay-ui:message key="pick-bundle" />
+					</div>
+				</div>
+
+				<div class="multi-step-step <%= step == 2 ? "current" : "" %> <%= step >= 3 ? "complete" : "" %>">
+					<div class="progress-image-hpi">
+						<div class="progress-container-hpi">
+							<div class="progress-hpi progress">
+								<div class="progress-bar-hpi progress-bar"></div>
+							</div>
+						</div>
+
+						<div class="progress-dot-hpi progress-dot-outer-hpi"></div>
+						<div class="progress-dot-hpi progress-dot-inner-hpi"></div>
+					</div>
+
+					<div class="multi-step-text">
+						<liferay-ui:message key="refine-bundle" />
+					</div>
+				</div>
+
+				<div class="multi-step-step <%= step == 3 ? "current" : "" %> <%= step >= 4 ? "complete" : "" %>">
+					<div class="progress-image-hpi">
+						<div class="progress-container-hpi">
+							<div class="progress-hpi progress">
+								<div class="progress-bar-hpi progress-bar"></div>
+							</div>
+						</div>
+
+						<div class="progress-dot-hpi progress-dot-outer-hpi"></div>
+						<div class="progress-dot-hpi progress-dot-inner-hpi"></div>
+					</div>
+
+					<div class="multi-step-text">
+						<liferay-ui:message key="view-estimate" />
+					</div>
+				</div>
+			</c:when>
+			<c:otherwise>
+				<div class="multi-step-step <%= step == 0 ? "current" : "" %> <%= step >= 1 ? "complete" : "" %>">
+					<div class="progress-image-hpi">
+						<div class="progress-container-hpi">
+							<div class="progress-hpi progress">
+								<div class="progress-bar-hpi progress-bar"></div>
+							</div>
+						</div>
+
+						<div class="progress-dot-hpi progress-dot-outer-hpi"></div>
+						<div class="progress-dot-hpi progress-dot-inner-hpi"></div>
+					</div>
+
+					<div class="multi-step-text">
+						<liferay-ui:message key="pre-qualification" />
+					</div>
+				</div>
+
+				<div class="multi-step-step <%= step == 1 ? "current" : "" %> <%= step >= 2 ? "complete" : "" %>">
+					<div class="progress-image-hpi">
+						<div class="progress-container-hpi">
+							<div class="progress-hpi progress">
+								<div class="progress-bar-hpi progress-bar"></div>
+							</div>
+						</div>
+
+						<div class="progress-dot-hpi progress-dot-outer-hpi"></div>
+						<div class="progress-dot-hpi progress-dot-inner-hpi"></div>
+					</div>
+
+					<div class="multi-step-text">
+						<liferay-ui:message key="pick-hardware" />
+					</div>
+				</div>
+
+				<div class="multi-step-step <%= step == 2 ? "current" : "" %> <%= step >= 3 ? "complete" : "" %>">
+					<div class="progress-image-hpi">
+						<div class="progress-container-hpi">
+							<div class="progress-hpi progress">
+								<div class="progress-bar-hpi progress-bar"></div>
+							</div>
+						</div>
+
+						<div class="progress-dot-hpi progress-dot-outer-hpi"></div>
+						<div class="progress-dot-hpi progress-dot-inner-hpi"></div>
+					</div>
+
+					<div class="multi-step-text">
+						<liferay-ui:message key="tailored-services" />
+					</div>
+				</div>
+
+				<div class="multi-step-step <%= step == 3 ? "current" : "" %> <%= step >= 4 ? "complete" : "" %>">
+					<div class="progress-image-hpi">
+						<div class="progress-container-hpi">
+							<div class="progress-hpi progress">
+								<div class="progress-bar-hpi progress-bar"></div>
+							</div>
+						</div>
+
+						<div class="progress-dot-hpi progress-dot-outer-hpi"></div>
+						<div class="progress-dot-hpi progress-dot-inner-hpi"></div>
+					</div>
+
+					<div class="multi-step-text">
+						<liferay-ui:message key="view-estimate" />
+					</div>
+				</div>
+			</c:otherwise>
+		</c:choose>
+
+	</div>
+</div>

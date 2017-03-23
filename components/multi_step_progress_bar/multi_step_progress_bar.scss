@@ -1,0 +1,155 @@
+@import "test";
+@import "bourbon";
+
+
+// PROGRESS BAR
+$progress-shadow-color: $gray-lighter;
+$progress-bar-color: $gray;
+$progress-bar-complete-color: $orange-light;
+
+$progress-dot-outer-size: 30px;
+$progress-dot-inner-size: 20px;
+
+
+.multi-step-progress-bar-hpi {
+	@include display(flex);
+	margin-left: -15%;
+	margin-right: -15%;
+
+	.multi-step-step {
+		@include flex(1);
+		position: relative;
+	}
+
+	.progress-image-hpi {
+		@include display(flex);
+		@include align-items(center);
+
+		height: 40px;
+		position: relative;
+	}
+
+	.progress-container-hpi {
+		@include display(flex);
+		@include align-items(center);
+
+		@include flex(1);
+
+		background: $progress-shadow-color;
+		height: 15px;
+	}
+
+	.progress-hpi {
+		@include flex(1);
+
+	  	background: $progress-bar-color;
+	  	height: 5px;
+		border-radius: 0;
+		box-shadow: none;
+		margin: 0;
+		z-index: 1;
+	}
+
+	.progress-bar-hpi {
+		background: $progress-bar-complete-color;
+		box-shadow: none;
+		height: 5px;
+		width: 0;
+	}
+
+	.progress-dot-hpi {
+		border-radius: 50%;
+		left: 50%;
+		position: absolute;
+		right: 50%;
+		top: 50%;
+		transform: translateY(-50%);
+	}
+
+	.progress-dot-outer-hpi {
+		background: $progress-shadow-color;
+		height: $progress-dot-outer-size;
+		margin-left: -$progress-dot-outer-size/2;
+		width: $progress-dot-outer-size;
+	}
+
+	.progress-dot-inner-hpi {
+		background: $progress-bar-color;
+		height: $progress-dot-inner-size;
+		margin-left: -$progress-dot-inner-size/2;
+		width: $progress-dot-inner-size;
+		z-index: 2;
+	}
+
+	.multi-step-text {
+		text-align: center;
+	}
+
+	// first and last elements
+	.multi-step-step:first-of-type {
+		.progress-image-hpi {
+			@include justify-content(flex-end);
+		}
+
+		.progress-container-hpi {
+			@include flex(0 1 auto);
+			width: 50%;
+		}
+
+		.multi-step-text {
+			left: 50%;
+			margin-left: -15px;
+			position: absolute;
+			text-align: left;
+		}
+	}
+
+	.multi-step-step:last-of-type {
+		.progress-container-hpi {
+			@include flex(0 1 auto);
+			width: 50%;
+		}
+
+		.multi-step-text {
+			right: 50%;
+			margin-right: -15px;
+			position: absolute;
+			text-align: right;
+		}
+	}
+
+	// states
+	.current {
+		&.multi-step-step:first-of-type {
+			.progress-bar-hpi {
+				width: 0;
+			}
+		}
+
+		&.multi-step-step:last-of-type {
+			.progress-bar-hpi {
+				width: 100%;
+			}
+		}
+
+		.progress-bar-hpi {
+			width: 50%;
+		}
+
+		.progress-dot-inner-hpi {
+			background: $progress-bar-complete-color;
+		}
+	}
+
+	.complete {
+		.progress-bar-hpi {
+			width: 100%;
+		}
+
+		.progress-dot-inner-hpi {
+			background: $progress-bar-complete-color;
+		}
+	}
+
+}
+
