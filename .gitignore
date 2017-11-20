@@ -1,3 +1,6 @@
 .sass-cache
 .sass-cache/*
 *.map
+node_modules
+**.idea
+**.DS_Store
