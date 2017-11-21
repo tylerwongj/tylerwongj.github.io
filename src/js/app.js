@@ -3,5 +3,9 @@ var $ = require('jquery');
 require('../css/style.css');
 
 (function() {
-	$('body').append('what');
+	var $firstButton = $('#firstButton');
+
+	$firstButton.click(() => {
+		console.log('Add Button');
+	});
 })();
