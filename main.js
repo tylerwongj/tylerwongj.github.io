@@ -1,4 +1,4 @@
-var content = document.querySelector('.js-layout__content');
+var content = document.querySelector('.js-content');
 
 function resizeHeaderOnScroll() {
 	var distanceY = this.pageYOffset || this.scrollTop;

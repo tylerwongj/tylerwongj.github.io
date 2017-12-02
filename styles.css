@@ -38,6 +38,9 @@
 	transition: all 0.25s ease-out;
 }
 
+.tw-content {
+	padding-top: 20px;
+}
 
 /* Imported Styles */
 
