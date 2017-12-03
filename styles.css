@@ -23,7 +23,7 @@
 
 .tw-header.is-small .tw-logo.portfolio-logo {
 	height: 50px;
-	margin-top: 25px;
+	margin-top: 30px;
 	transition: all 0.25s ease-out;
 	width: 50px;
 }
@@ -40,6 +40,18 @@
 
 .tw-content {
 	padding-top: 20px;
+}
+
+.tw .mdl-layout__title {
+	font-size: 20px;
+}
+
+@media (min-width: 1025px) {
+	.mdl-layout__drawer-button {
+		opacity: 0;
+		transition: all 0.25s ease-in-out;
+		width: 0;
+	}
 }
 
 /* Imported Styles */
@@ -92,6 +104,8 @@
 	background-color: rgba(0, 0, 0, 0.08);
 	text-transform: uppercase;
 	height: 45px;
+
+	transition: all 0.25s ease-in-out;
 }
 
 .portfolio-navigation-row .mdl-navigation {
