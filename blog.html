@@ -31,31 +31,34 @@
 
 <body>
     <div class="mdl-layout mdl-js-layout mdl-layout--fixed-header">
-        <header class="mdl-layout__header mdl-layout__header--waterfall portfolio-header">
-            <div class="mdl-layout__header-row portfolio-logo-row">
-                <span class="mdl-layout__title">
-                    <div class="portfolio-logo"></div>
-                    <span class="mdl-layout__title">Tyler Wong</span>
-                </span>
-            </div>
-            <div class="mdl-layout__header-row portfolio-navigation-row mdl-layout--large-screen-only">
-                <nav class="mdl-navigation mdl-typography--body-1-force-preferred-font">
-                    <a class="mdl-navigation__link" href="index.html">Portfolio</a>
-                    <a class="mdl-navigation__link  is-active" href="blog.html">Blog</a>
-                    <a class="mdl-navigation__link" href="about.html">About</a>
-                    <a class="mdl-navigation__link" href="contact.html">Contact</a>
-                </nav>
-            </div>
-        </header>
-        <div class="mdl-layout__drawer mdl-layout--small-screen-only">
-            <nav class="mdl-navigation mdl-typography--body-1-force-preferred-font">
-                <a class="mdl-navigation__link is-active" href="index.html">Portfolio</a>
-                <a class="mdl-navigation__link" href="blog.html">Blog</a>
-                <a class="mdl-navigation__link" href="about.html">About</a>
-                <a class="mdl-navigation__link" href="contact.html">Contact</a>
-            </nav>
-        </div>
-        <main class="mdl-layout__content">
+		<header class="mdl-layout__header portfolio-header tw-header js-header">
+			<div class="mdl-layout__header-row portfolio-logo-row">
+					<span class="mdl-layout__title">
+						<div class="portfolio-logo tw-logo"></div>
+						<span class="mdl-layout__title">Tyler Wong</span>
+					</span>
+			</div>
+
+			<div class="mdl-layout__header-row portfolio-navigation-row mdl-layout--large-screen-only">
+				<nav class="mdl-navigation mdl-typography--body-1-force-preferred-font">
+					<a class="mdl-navigation__link is-active" href="index.html">Portfolio</a>
+					<a class="mdl-navigation__link" href="blog.html">Blog</a>
+					<a class="mdl-navigation__link" href="about.html">About</a>
+					<a class="mdl-navigation__link" href="contact.html">Contact</a>
+				</nav>
+			</div>
+		</header>
+
+		<div class="mdl-layout__drawer">
+			<nav class="mdl-navigation mdl-typography--body-1-force-preferred-font">
+				<a class="mdl-navigation__link is-active" href="index.html">Portfolio</a>
+				<a class="mdl-navigation__link" href="blog.html">Blog</a>
+				<a class="mdl-navigation__link" href="about.html">About</a>
+				<a class="mdl-navigation__link" href="contact.html">Contact</a>
+			</nav>
+		</div>
+
+        <main class="mdl-layout__content tw-content js-content">
             <div class="mdl-grid portfolio-max-width">
                 <div class="mdl-grid mdl-cell mdl-cell--12-col mdl-cell--4-col-tablet mdl-card mdl-shadow--4dp">
                     <div class="mdl-card__media mdl-cell mdl-cell--12-col-tablet">
@@ -169,8 +172,11 @@
                 </div>
             </footer>
         </main>
-    </div>
+	</div>
+
     <script src="https://code.getmdl.io/1.3.0/material.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+	<script src="main.js"></script>
 </body>
 
 </html>

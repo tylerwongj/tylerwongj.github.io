@@ -2,7 +2,7 @@ var content = document.querySelector('.js-content');
 
 function resizeHeaderOnScroll() {
 	var distanceY = this.pageYOffset || this.scrollTop;
-	var distanceShrink = 100;
+	var distanceShrink = 15;
 	var header = document.querySelector('.js-header');
 	var headerBottomRow = document.querySelector('.portfolio-navigation-row');
 	var $window = $(window);
